@@ -63,5 +63,8 @@ By automating this workflow-
 The original dataset used in this project belongs to a private organization and cann't be shared publicly.
 To demonstrate the workflow, I used a **synthetic sample dataset** with a similar structure. The script logic remains the same and reflects real-world ETL and reporting processes.
 
+pip install -r requirements.txt
+python sales_analysis.py
+
 
 
