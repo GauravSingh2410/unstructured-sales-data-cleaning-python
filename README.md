@@ -57,11 +57,11 @@ By automating this workflow-
 | :--- | :--- |
 | `sales_analysis.py` | Main script for ETL and formatting logic. |
 | `sample_input.xlsx` | Raw, unstructured sales data (for testing). |
+| `styled_sales_voucher.xlsx` | Final output: Cleaned & formatted Excel report. |
 
 ## Data Privacy Note
-
 The original dataset used in this project belongs to a private organization and cann't be shared publicly.
 To demonstrate the workflow, I used a **synthetic sample dataset** with a similar structure. The script logic remains the same and reflects real-world ETL and reporting processes.
 
-| `styled_sales_voucher.xlsx` | Final output: Cleaned & formatted Excel report. |
+
 
