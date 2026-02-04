@@ -2,6 +2,8 @@ import pandas as pd
 
 df = pd.read_excel("sales_voucher.xlsx")
 
+#General Analysis of my data
+
 print(df.head()) 
 print("Shape of data (rows, columns):", df.shape)
 
@@ -79,7 +81,7 @@ with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
     txn_revenue.to_excel(writer, sheet_name="Txn Revenue")
     daily_revenue.to_excel(writer, sheet_name="Daily Trend")
 
-print("Multi-sheet Excel report created!")
+print("Multi sheet Excel report created")
 
 # CHARTS (For Visulaization)
 
@@ -114,4 +116,5 @@ ws_ops.add_chart(chart2, "E2")
 
 wb.save("sales_report.xlsx")
 
-print("Charts added successfully!")
+print("Charts added successfully")
+
