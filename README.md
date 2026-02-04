@@ -2,9 +2,9 @@
 Data cleaning and Excel automation using Python (Pandas & OpenPyXL)
 
 ## Business Context
-Drawing from my professional experience at a **tech startup** and **NITI Aayog**, I observed a recurring bottleneck: critical operational sales data often arrives in highly unstructured formats (merged cells, inconsistent dates-formats, missing values). This forces analysts to spend hours on manual cleanup in Excel & Google Sheets before any analysis can begin.
+Drawing from my professional experience at a **Tech startup** and **NITI Aayog**, I observed a recurring bottleneck: critical operational sales data often arrives in highly unstructured formats (merged cells, inconsistent dates-formats, missing values). This forces analysts to spend hours on manual cleanup in Excel & Google Sheets before any analysis can begin.
 
-**My this project automates that ETL (Extract, Transform, Load) process.** It transforms raw, messy vouchers into a clean, analysis-ready format and applies automated formatting (colors, borders) to generate executive-ready reports instantly.
+**My this project automates that ETL (Extract, Transform, Load) process.** It transforms raw, messy vouchers into a clean, analysis-ready format and applies automated formatting (colors, borders, graphs) to generate executive-ready reports instantly.
 
 ## Key Features
 * **Data Ingestion:** Reads raw `.xlsx` operational files using `pandas`.
@@ -12,10 +12,12 @@ Drawing from my professional experience at a **tech startup** and **NITI Aayog**
     * Identifies and handles **Missing Values (NaNs)**.
     * Standardizes column names (snake_case) for consistency.
     * Parses and formats Date/Time columns.
+    * Check duplicates
 * **Excel Automation (OpenPyXL):**
     * Exports clean data to a new Excel file.
     * **Conditional Formatting:** Applies alternating row colors (called Zebra striping) for readability.
     * Auto-adjusts column widths based on content.
+    * Make automated graphs to understand the trend
 
 ## Data Transformation & Business Insights
 Beyond cleaning and formatting, this project demonstrates how structured data can be used to generate **actionable operational insights**.
@@ -26,7 +28,7 @@ Using Pandas, the cleaned dataset is grouped and analyzed to calculate:
 - **Volume Analysis:** Operator-wise transaction volume.
 - **Regional Performance:** State-wise performance comparison.
 - **Transaction Quality:** Count of unique Txn IDs and average transaction value.
-  ( I believe this mirrors real-world reporting dashboards used by operations & finance teams.)
+  ( I believe this mirrors real-world reporting dashboards used by operations & finance teams. And more can definately be done)
 
 ### Feature Engineering
 Derived columns are created to simulate SQL logic and ETL transformations:
@@ -37,20 +39,20 @@ Derived columns are created to simulate SQL logic and ETL transformations:
 ### Data Validation & Quality Checks
 To ensure reporting accuracy, the script performs automated audits:
 - Flags **duplicate Txn IDs**.
-- Identifies **negative or zero-value** transactions.
-- Validates date ranges and detects outliers in transaction amounts.
+- Identifies **negative or zero value** transactions.
+- Validates date ranges & detects outliers in transaction amounts.
 
 ## Business Impact
 By automating this workflow-
-✔ **Efficiency:** Manual cleanup time reduces from **hours to minutes**.  
-✔ **Accuracy:** Reporting becomes **standardized and error-free**.  
-✔ **Focus:** Teams can focus on **analysis instead of formatting**.  
-✔ **Scalability:** The logic mirrors **SQL CASE statements** and can scale into production ETL systems.
+**Efficiency:** Manual cleanup time reduces from **hours to minutes**.  
+**Accuracy:** Reporting becomes **standardized and error-free**.  
+**Focus:** Teams can focus more on **analysis after quick formatting**.  
+**Scalability:** The logic mirrors **SQL CASE statements** and can scale into production ETL systems & more.
 
 ## Tech Stack
 * **Python:** Core logic & scripting.
 * **Pandas:** Data manipulation, aggregation & cleaning.
-* **OpenPyXL:** Advanced Excel formatting (styling, borders, colors).
+* **OpenPyXL:** Advanced Excel formatting (styling, borders, colors, graphs).
 
 ## Project Structure
 | File | Description |
@@ -60,7 +62,7 @@ By automating this workflow-
 | `styled_sales_voucher.xlsx` | Final output: Cleaned & formatted Excel report. |
 
 ## Data Privacy Note
-The original dataset used in this project belongs to a private organization and cann't be shared publicly.
+The original dataset used in this project belongs to a pvt org and I cann't be share it publicly.
 To demonstrate the workflow, I used a **synthetic sample dataset** with a similar structure. The script logic remains the same and reflects real-world ETL and reporting processes.
 
 pip install -r requirements.txt
