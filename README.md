@@ -57,9 +57,10 @@ By automating this workflow-
 ## Project Structure
 | File | Description |
 | :--- | :--- |
-| `sales_analysis.py` | Main script for ETL and formatting logic. |
-| `sample_input.xlsx` | Raw, unstructured sales data (for testing). |
-| `styled_sales_voucher.xlsx` | Final output: Cleaned & formatted Excel report. |
+| `sales_analysis.py` | Main Python script that performed data cleaning, KPI calculation, Excel report generation, Inserting graphs etc. |
+| `sample_voucher.xlsx` | Synthetic raw, unstructured sales data (for testing). |
+| `sales_report.xlsx` | Final output: Cleaned & formatted Excel report with summary and charts. |
+| `requirements.xlsx` | List of Python libraries required to run my project. |
 
 ## Data Privacy Note
 The original dataset used in this project belongs to a pvt org and I cann't be share it publicly.
