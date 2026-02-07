@@ -2,7 +2,7 @@ import pandas as pd
 
 df = pd.read_excel("sales_voucher.xlsx")
 
-#General Analysis of my data
+#General Analysis Required of My Data
 
 print(df.head()) 
 print("Shape of data (rows, columns):", df.shape)
@@ -25,7 +25,7 @@ df["tax amount"] = df["tax amount"].fillna(0)
 
 df["discount"] = df["discount"].fillna(0)
 
-df["State"] = df["State"].fillna("unknown")
+df["State"] = df["State"].fillna("Unknown")
 
 df["company name"] = df["company name"].fillna("Unknown")
 
@@ -57,10 +57,12 @@ print("\nRevenue by State:")
 state_revenue = df.groupby("State")["Recieved amount"].sum().sort_values(ascending=False)
 print(state_revenue)
 
+# Top 10 transactions
 print("\nRevenue per Transaction ID:")
 txn_revenue = df.groupby("Txn ID")["Recieved amount"].sum().sort_values(ascending=False)
-print(txn_revenue.head(10))  # Top 10 transactions
+print(txn_revenue.head(10))  
 
+#Daily Revenue
 print("\nDaily Revenue Trend:")
 daily_revenue = df.groupby("Date")["Recieved amount"].sum().sort_index()
 print(daily_revenue)
@@ -81,7 +83,7 @@ with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
     txn_revenue.to_excel(writer, sheet_name="Txn Revenue")
     daily_revenue.to_excel(writer, sheet_name="Daily Trend")
 
-print("Multi sheet Excel report created")
+print("Gaurav your multi sheet excel report created")
 
 # CHARTS (For Visulaization)
 
@@ -116,5 +118,6 @@ ws_ops.add_chart(chart2, "E2")
 
 wb.save("sales_report.xlsx")
 
-print("Charts added successfully")
+print("Gaurav your charts are added successfully")
+
 
