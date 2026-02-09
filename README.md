@@ -33,7 +33,7 @@ Using Pandas, the cleaned dataset is grouped and analyzed to calculate:
 ### Feature Engineering
 Derived columns are created to simulate SQL logic and ETL transformations:
 - **Revenue Logic:** Revenue after tax & Discount calculations.
-- **Categorization:** Classifying transactions (e.g., Recharge vs. Setup).
+- **Categorization:** Classifying transactions (For e.g.: Recharge vs. Setup).
 - **Time Analysis:** Weekday vs. Weekend transaction trends.
 
 ### Data Validation & Quality Checks
@@ -66,8 +66,9 @@ By automating this workflow-
 The original dataset used in this project belongs to a pvt org and I cann't be share it publicly.
 To demonstrate the workflow, I used a **synthetic sample dataset** with a similar structure. The script logic remains the same and reflects real-world ETL and reporting processes.
 
-pip install -r requirements.txt
-python sales_analysis.py
+`pip install -r requirements.txt`
+
+`python sales_analysis.py`
 
 
 
