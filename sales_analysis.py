@@ -3,7 +3,6 @@ import pandas as pd
 df = pd.read_excel("sales_voucher.xlsx")
 
 #General Analysis Required of My Data
-
 print(df.head()) 
 print("Shape of data (rows, columns):", df.shape)
 
@@ -68,14 +67,12 @@ daily_revenue = df.groupby("Date")["Recieved amount"].sum().sort_index()
 print(daily_revenue)
 
 # BUSINESS SUMMARY CALCULATIONS 
-
 top_operators = df.groupby("Operator Name")["Recieved amount"].sum().sort_values(ascending=False)
 state_revenue = df.groupby("State")["Recieved amount"].sum().sort_values(ascending=False)
 txn_revenue = df.groupby("Txn ID")["Recieved amount"].sum().sort_values(ascending=False)
 daily_revenue = df.groupby("Date")["Recieved amount"].sum().sort_index()
 
 # EXPORT TO MULTI-SHEET EXCEL
-
 with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
     df.to_excel(writer, sheet_name="Cleaned Data", index=False)
     top_operators.to_excel(writer, sheet_name="Top Operators")
@@ -86,7 +83,6 @@ with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
 print("Gaurav your multi sheet excel report created")
 
 # CHARTS (For Visulaization)
-
 from openpyxl import load_workbook
 from openpyxl.chart import LineChart, Reference, BarChart
 
@@ -119,5 +115,6 @@ ws_ops.add_chart(chart2, "E2")
 wb.save("sales_report.xlsx")
 
 print("Gaurav your charts are added successfully")
+
 
 
