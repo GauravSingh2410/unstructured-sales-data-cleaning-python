@@ -22,6 +22,8 @@ Drawing from my professional experience at a **Tech startup** and **NITI Aayog**
 ## Data Transformation & Business Insights
 Beyond cleaning and formatting, this project demonstrates how structured data can be used to generate **actionable operational insights**.
 
+<img width="700" height="800" alt="Revenue by state" src="https://github.com/user-attachments/assets/f6e1528c-418f-4398-8688-6716dafd24f8" />
+
 ### Aggregations & Metrics
 Using Pandas, the cleaned dataset is grouped and analyzed to calculate:
 - **Total Sales:** Aggregated amount per day/month
