@@ -3,6 +3,7 @@ import pandas as pd
 df = pd.read_excel("sales_voucher.xlsx")
 
 #General Analysis Required of My Data
+
 print(df.head()) 
 print("Shape of data (rows, columns):", df.shape)
 
@@ -19,9 +20,13 @@ print("\nLast 5 Rows:")
 print(df.tail())
 
 df["Operator Number"] = df["Operator Number"].astype(str)
+
 df["tax amount"] = df["tax amount"].fillna(0)
+
 df["discount"] = df["discount"].fillna(0)
+
 df["State"] = df["State"].fillna("Unknown")
+
 df["company name"] = df["company name"].fillna("Unknown")
 
 print("\nMissing values in each column:")
@@ -111,3 +116,4 @@ ws_ops.add_chart(chart2, "E2")
 wb.save("sales_report.xlsx")
 
 print("Gaurav your charts are added successfully")
+
