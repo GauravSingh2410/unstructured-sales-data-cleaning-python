@@ -2,7 +2,7 @@ import pandas as pd
 
 df = pd.read_excel("sales_voucher.xlsx")
 
-#GENERAL ANALYSIS REQUIRED OF MY DATA
+#Genral Analysis Required of my Data 
 print(df.head()) 
 print("Shape of data (rows, columns):", df.shape)
 
@@ -29,21 +29,21 @@ print(df.isnull().sum())
 
 print("\nBUSINESS SUMMARY\n")
 
-#TOTAL REVENUE 
+#Total Revenue
 total_revenue = df["Recieved amount"].sum()
 print(f"Total Revenue: ₹{total_revenue:,.2f}")
 
-#REVENUE BY DATE
+#Revenue by Date
 daily_sales = df.groupby("Date")["Recieved amount"].sum().sort_index()
 print("\nRevenue by Date:")
 print(daily_sales)
 
-#REVENUE BY STATE
+#Revenue By State
 state_sales = df.groupby("State")["Recieved amount"].sum().sort_values(ascending=False)
 print("\nRevenue by State:")
 print(state_sales)
 
-#TOP OPERATORS
+#Top Operators
 operator_sales = df.groupby("Operator Name")["Recieved amount"].sum().sort_values(ascending=False)
 print("\nTop Operators by Revenue:")
 print(operator_sales.head(5))
@@ -52,23 +52,23 @@ print("\nRevenue by State:")
 state_revenue = df.groupby("State")["Recieved amount"].sum().sort_values(ascending=False)
 print(state_revenue)
 
-#TOP 10 TRANSACTIONS
+#Top 10 transactions
 print("\nRevenue per Transaction ID:")
 txn_revenue = df.groupby("Txn ID")["Recieved amount"].sum().sort_values(ascending=False)
 print(txn_revenue.head(10))  
 
-#DAILY REVENUE
+#Daily Revenue
 print("\nDaily Revenue Trend:")
 daily_revenue = df.groupby("Date")["Recieved amount"].sum().sort_index()
 print(daily_revenue)
 
-#BUSINESS SUMMARY CALCULATIONS 
+#Business Summary Calculations
 top_operators = df.groupby("Operator Name")["Recieved amount"].sum().sort_values(ascending=False)
 state_revenue = df.groupby("State")["Recieved amount"].sum().sort_values(ascending=False)
 txn_revenue = df.groupby("Txn ID")["Recieved amount"].sum().sort_values(ascending=False)
 daily_revenue = df.groupby("Date")["Recieved amount"].sum().sort_index()
 
-#EXPORT TO MULTI-SHEET EXCEL
+#Export to Multi-sheet Excel
 with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
     df.to_excel(writer, sheet_name="Cleaned Data", index=False)
     top_operators.to_excel(writer, sheet_name="Top Operators")
@@ -78,13 +78,13 @@ with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
 
 print("Gaurav your multi sheet excel report created")
 
-# CHARTS (For Visulaization)
+#Charts (For Visulaization)
 from openpyxl import load_workbook
 from openpyxl.chart import LineChart, Reference, BarChart
 
 wb = load_workbook("sales_report.xlsx")
 
-#LINE CHART FOR DAILY TREND ANALYSIS
+#Line chart for daily trend analysis
 ws_trend = wb["Daily Trend"]
 chart1 = LineChart()
 chart1.title = "Daily Revenue Trend"
@@ -96,7 +96,7 @@ chart1.add_data(data, titles_from_data=True)
 chart1.set_categories(cats)
 ws_trend.add_chart(chart1, "E2")
 
-#BAR CHART FOR TOP OPERATORS ANALYSIS
+#Bar Chart for top operators analysis
 ws_ops = wb["Top Operators"]
 chart2 = BarChart()
 chart2.title = "Top Operators by Revenue"
@@ -111,3 +111,4 @@ ws_ops.add_chart(chart2, "E2")
 wb.save("sales_report.xlsx")
 
 print("Gaurav your charts are added successfully")
+
