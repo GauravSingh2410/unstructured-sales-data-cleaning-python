@@ -52,7 +52,7 @@ print("\nRevenue by State:")
 state_revenue = df.groupby("State")["Recieved amount"].sum().sort_values(ascending=False)
 print(state_revenue)
 
-#Top 10 transactions
+#Top 10 Transactions
 print("\nRevenue per Transaction ID:")
 txn_revenue = df.groupby("Txn ID")["Recieved amount"].sum().sort_values(ascending=False)
 print(txn_revenue.head(10))  
@@ -84,7 +84,7 @@ from openpyxl.chart import LineChart, Reference, BarChart
 
 wb = load_workbook("sales_report.xlsx")
 
-#Line chart for daily trend analysis
+#Line Chart for Daily Trend Analysis
 ws_trend = wb["Daily Trend"]
 chart1 = LineChart()
 chart1.title = "Daily Revenue Trend"
@@ -96,7 +96,7 @@ chart1.add_data(data, titles_from_data=True)
 chart1.set_categories(cats)
 ws_trend.add_chart(chart1, "E2")
 
-#Bar Chart for top operators analysis
+#Bar Chart for Top Operators Analysis
 ws_ops = wb["Top Operators"]
 chart2 = BarChart()
 chart2.title = "Top Operators by Revenue"
@@ -111,4 +111,5 @@ ws_ops.add_chart(chart2, "E2")
 wb.save("sales_report.xlsx")
 
 print("Gaurav your charts are added successfully")
+
 
