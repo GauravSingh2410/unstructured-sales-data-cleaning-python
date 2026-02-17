@@ -22,7 +22,7 @@ Drawing from my professional experience at a **Tech startup** and **NITI Aayog**
 ## Data Transformation & Business Insights
 Beyond cleaning and formatting, this project demonstrates how structured data can be used to generate **actionable operational insights**.
 
-<img width="800" height="600" alt="Revenue by state" src="https://github.com/user-attachments/assets/f6e1528c-418f-4398-8688-6716dafd24f8" />
+<img width="700" height="600" alt="Revenue by state" src="https://github.com/user-attachments/assets/f6e1528c-418f-4398-8688-6716dafd24f8" />
 
 ### Aggregations & Metrics
 Using Pandas, the cleaned dataset is grouped and analyzed to calculate:
@@ -61,7 +61,7 @@ By automating this workflow-
 | :--- | :--- |
 | `sales_analysis.py` | Main Python script that performed data cleaning, KPI calculation, Excel report generation, Inserting graphs etc. |
 | `sample_voucher.xlsx` | Synthetic raw, unstructured sales data (for testing) |
-| `sales_report.xlsx` | Final output: Cleaned & formatted Excel report with summary and charts |
+| `sales_report.xlsx` | Final output: Cleaned & formatted Excel report with summary & charts |
 | `requirements.xlsx` | List of Python libraries required to run my project |
 
 ## Data Privacy Note
