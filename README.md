@@ -45,7 +45,7 @@ To ensure reporting accuracy, the script performs automated audits:
 - Validates date ranges & detects outliers in transaction amounts
 
 ## Business Impact
-By automating this workflow-
+By automating this workflow -
 **Efficiency:** Manual cleanup time reduces from **hours to minutes** 
 **Accuracy:** Reporting becomes **standardized and error-free**
 **Focus:** Teams can focus more on **analysis after quick formatting**  
