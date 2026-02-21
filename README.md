@@ -1,5 +1,5 @@
 # Unstructured-sales-data-cleaning & transformation-python
-Data cleaning and Excel automation using Python (Pandas & OpenPyXL) on VS Code
+Data cleaning and Excel automation using Python (Pandas & OpenPyXL) on VS Code 
 
 ## Business Context
 Drawing from my professional experience at a **Tech startup** and **NITI Aayog**, I observed a recurring bottleneck: critical operational sales data often arrives in highly unstructured formats (merged cells, inconsistent dates-formats, missing values). This forces analysts to spend hours on manual cleanup in Excel & Google Sheets before any analysis can begin.
