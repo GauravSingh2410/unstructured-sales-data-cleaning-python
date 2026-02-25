@@ -11,11 +11,11 @@ Drawing from my professional experience at a **Tech startup** and **NITI Aayog**
 * **Data Cleaning:**
     * Identifies and handles **Missing Values (NaNs)**
     * Standardizes column names (snake_case) for consistency
-    * Parses and formats Date/Time columns
+    * Parses and formats Date & Time columns
     * Check duplicates
 * **Excel Automation (OpenPyXL):**
     * Exports clean data to a new Excel file
-    * **Conditional Formatting:** Applies alternating row colors (called Zebra striping) for readability
+    * **Conditional Formatting:** Applies alternating row colors (Called Zebra Striping) for readability
     * Auto-adjusts column widths based on content
     * Make automated graphs to understand the trend
 
