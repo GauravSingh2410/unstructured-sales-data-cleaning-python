@@ -1,5 +1,4 @@
 import pandas as pd
-
 df = pd.read_excel("sales_voucher.xlsx")
 
 #Genral Analysis Required of My Data 
@@ -77,6 +76,7 @@ with pd.ExcelWriter("sales_report.xlsx", engine="openpyxl") as writer:
     daily_revenue.to_excel(writer, sheet_name="Daily Trend")
 
 print("Gaurav your multi sheet excel report created")
+
 
 #Charts (For Visulaization)
 from openpyxl import load_workbook
