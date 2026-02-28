@@ -1,4 +1,5 @@
 import pandas as pd
+
 df = pd.read_excel("sales_voucher.xlsx")
 
 #Genral Analysis Required of My Data 
