@@ -1,8 +1,8 @@
 # Unstructured-sales-data-cleaning & transformation-python
-Data cleaning and Excel automation using Python (Pandas & OpenPyXL) by "Gaurav Singh"
+Data cleaning and Excel automation using Python (Pandas & OpenPyXL) by 'Gaurav Singh'
 
 ## Business Context
-Drawing from my professional experience at a **Tech startup** and **NITI Aayog**, I observed a recurring bottleneck: critical operational sales data often arrives in highly unstructured formats (merged cells, inconsistent dates-formats, missing values). This forces analysts to spend hours on manual cleanup in MS Excel & Google Spreadsheets before any analysis can begin.
+Drawing from my professional experience at a **Tech startup** and **NITI Aayog, GoI**, I observed a recurring bottleneck: critical operational sales data often arrives in highly unstructured formats (merged cells, inconsistent dates-formats, missing values). This forces analysts to spend hours on manual cleanup in MS Excel & Google Spreadsheets before any analysis can begin.
 
 **My this project automates that Extract, Transform, Load (ETL) process.** It transforms raw, messy vouchers into a clean, analysis-ready format and applies automated formatting (colors, borders, graphs) to generate executive-ready reports instantly.
 
