@@ -40,6 +40,7 @@ Derived columns are created to simulate SQL logic and ETL transformations:
 
 ### Data Validation & Quality Checks
 To ensure reporting accuracy, the script performs automated audits:
+
 - Flags **duplicate Txn IDs**
 - Identifies **negative or zero value** transactions
 - Validates date ranges & detects outliers in transaction amounts
