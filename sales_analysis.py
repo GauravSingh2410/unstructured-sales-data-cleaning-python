@@ -1,4 +1,5 @@
 import pandas as pd
+
 df = pd.read_excel("sales_voucher.xlsx")
 
 #Genral Analysis Required of My Data 
@@ -111,6 +112,7 @@ ws_ops.add_chart(chart2, "E2")
 wb.save("sales_report.xlsx")
 
 print("Gaurav your charts are added successfully.")
+
 
 
 
